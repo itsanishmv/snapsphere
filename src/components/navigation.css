@@ -1,0 +1,62 @@
+.icons__wrap {
+  display: flex;
+  margin-left: -200px;
+}
+.profile__icon {
+  margin-left: -75px;
+  height: 25px;
+  width: 25px;
+}
+.icon__home {
+  background: none;
+  border: none;
+  fill: white;
+  stroke: black;
+  stroke-width: 5px;
+  height: 25px;
+  width: 25px;
+}
+.icon__home:hover {
+  fill: lightgray;
+}
+.icon__upload {
+  height: 25px;
+  width: 25px;
+  background: none;
+  border: none;
+  margin-left: 30px;
+  margin-right: 100px;
+  fill: white;
+  stroke-width: 3px;
+  stroke: black;
+}
+.icon__upload {
+  cursor: pointer;
+}
+.icon__upload:hover {
+  fill: lightgray;
+}
+
+.icon__Dm {
+  height: 25px;
+  width: 25px;
+  background: none;
+  border: none;
+  margin-left: 30px;
+}
+
+.logout__button {
+  background-color: #1a98ec;
+  color: white;
+  border: 0;
+  width: 150px;
+  border-radius: 5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+.logout__button:hover {
+  background-color: #068ae2;
+}

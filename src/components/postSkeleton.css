@@ -1,0 +1,31 @@
+.post__wrapper {
+  margin-top: 30px;
+  border: 1px solid lightgrey;
+  background-color: white;
+  height: 700px;
+  max-width: 600px;
+}
+.post__header {
+  display: flex;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.skel__header {
+  margin-top: 30px;
+  margin-left: 10px;
+}
+.skel__image {
+  width: 500px;
+}
+.skel__dp {
+  margin-top: 10px;
+}
+.skel__caption1 {
+  margin-left: 10px;
+}
+.skel__caption2 {
+  margin-left: 5px;
+}
+.post__caption {
+  margin-top: 10px;
+}

@@ -1,0 +1,95 @@
+.login__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fafafa;
+  height: 100vh;
+}
+.iphone {
+  height: 650px;
+}
+
+.login__form {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightgrey;
+  padding: 40px;
+  max-width: 300px;
+  background-color: rgba(var(--d87, 255, 255, 255), 1);
+  margin-top: -200px;
+}
+.name {
+  margin-bottom: 5px;
+  height: 30px;
+  width: 250px;
+  border-radius: 4px;
+  border: 2px solid lightgray;
+  outline: 0;
+  background-color: #fafafa;
+}
+.name:focus {
+  outline: 1px solid #0095f6;
+}
+.password {
+  margin-bottom: 10px;
+  height: 30px;
+  width: 250px;
+  border-radius: 4px;
+  border: 1px solid lightgrey;
+  outline: 0;
+  background-color: #fafafa;
+}
+.password:focus {
+  outline: 1px solid #0095f6;
+}
+.login__button {
+  height: 26px;
+  background-color: #0095f6;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: 100px;
+}
+.login__button:hover {
+  cursor: pointer;
+}
+.insta__logo {
+  margin-bottom: 20px;
+  object-fit: contain;
+  width: 150px;
+  margin-left: 50px;
+  height: 100px;
+  margin-top: -40px;
+}
+.login__signup {
+  display: flex;
+  justify-content: center;
+  border: 1px solid lightgray;
+  margin-top: 11px;
+  background-color: rgba(var(--d87, 255, 255, 255), 1);
+  padding: 6px;
+}
+.signup__text {
+  font-size: 14px;
+}
+
+.right__form {
+  margin-top: 100px;
+}
+.error__message {
+  max-width: 250px;
+  color: red;
+  font-size: small;
+}
+.link__login {
+  color: #0095f6;
+}
+.link__signup {
+}
+.success__message {
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  border: 2px solid black;
+}

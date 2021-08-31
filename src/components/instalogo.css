@@ -1,0 +1,10 @@
+.Insta-icon {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+.img__instaicon {
+  object-fit: contain;
+  height: 500px;
+  width: 500px;
+}

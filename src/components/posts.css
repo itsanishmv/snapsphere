@@ -1,0 +1,142 @@
+.post-wrapper {
+  width: 600px;
+  border: 1px solid lightgray;
+  margin-top: 30px;
+  background-color: white;
+}
+.post-caption {
+  font-weight: normal;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.post-image {
+  min-height: 400px;
+  max-height: 700px;
+
+  width: 600px;
+  object-fit: fill;
+  border-bottom: 1px solid lightgray;
+  border-top: 1px solid lightgrey;
+}
+.post-header {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.post-avatar {
+  margin-right: 10px;
+}
+.post__commentbox {
+  margin-top: 10px;
+
+  display: flex;
+}
+.comment__input {
+  flex: 1;
+  border: none;
+  border-top: 2px solid lightgrey;
+
+  outline: none;
+  padding: 10px;
+}
+.comment__input:focus {
+  border: 2px solid #7da2f3;
+}
+.comment__button {
+  font-weight: 700;
+  flex: 0;
+  border: none;
+  border-left: none;
+  border-right: none;
+  border-top: 2px solid lightgrey;
+  color: #6b97f6;
+  background-color: white;
+}
+.comment__button:disabled {
+  font-weight: 700;
+  color: lightgray;
+}
+.post__commented {
+  margin-top: -10px;
+  padding-left: 10px;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.skel__image {
+  padding: 20px;
+  padding-right: 0;
+}
+.skel__comments {
+  margin-left: 20px;
+}
+
+.unlike__btn {
+  height: 26px;
+  width: 26px;
+  margin-left: 10px;
+  fill: white;
+  stroke-width: 3px;
+  stroke: black;
+}
+.unlike__btn {
+  cursor: pointer;
+}
+.like__btn {
+  height: 26px;
+  width: 26px;
+  margin-left: 10px;
+  stroke-width: 3px;
+  fill: rgb(237, 73, 86);
+}
+.like__btn:hover {
+  cursor: pointer;
+}
+
+.comment__btn {
+  height: 25px;
+  width: 25px;
+  object-fit: contain;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.comment__btn:hover {
+  cursor: pointer;
+}
+.share__btn {
+  height: 25px;
+  width: 25px;
+  object-fit: contain;
+}
+.num__likes {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 2px;
+  font-size: 14px;
+  margin-left: 10px;
+  font-weight: 600;
+  color: rgba(var(--i1d, 38, 38, 38), 1);
+}
+.post__username {
+  color: black;
+}
+
+.deletebtn__wrap {
+  display: flex;
+  margin-left: 400px;
+}
+
+.deletebtn {
+  display: none;
+  background-color: #f5250a;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  padding: 5px;
+  font-weight: 600;
+}
+.post-header:hover .deletebtn {
+  display: block;
+}
+.deletebtn:hover {
+  cursor: pointer;
+}
