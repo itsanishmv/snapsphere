@@ -3,7 +3,7 @@ import React, { useContext, useState } from 'react'
 import firebase from 'firebase'
 import { db, storage } from './firebase'
 import './ImageUpload.css'
-import { createdContext } from './counterContext'
+import { createdContext } from './ContextApi'
 const ImageUpload = ({ username }) => {
     
     const [image, setImage] = useState(null)

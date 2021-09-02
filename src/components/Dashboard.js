@@ -2,7 +2,7 @@ import React, {useContext } from 'react'
 import './dashboard.css'
 import Nav from './navigation'
 
-import { createdContext } from './counterContext'
+import { createdContext } from './ContextApi'
 
 
 const Dashboard = () => {

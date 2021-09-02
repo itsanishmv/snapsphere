@@ -2,7 +2,7 @@ import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import React from 'react'
 import Loading from "./Instalogo";
-import CounterContext from "./counterContext";
+import ContextApi from "./ContextApi";
 
 
 const Dashboard = lazy(()=> import('./Dashboard'))
@@ -21,26 +21,26 @@ const App = () => {
                 <Switch>
                    
                     <Route exact path="/Dashboard">
-                        <CounterContext>
+                        <ContextApi>
                              <Dashboard/>
-                        </CounterContext>
+                        </ContextApi>
                     </Route>
                     
                     <Route exact path='/Feed'>
-                        <CounterContext>
+                        <ContextApi>
                                 <Feed/>
-                        </CounterContext>
+                        </ContextApi>
                     </Route>
 
                     <Route exact path='/'  >
-                        <CounterContext>
+                        <ContextApi>
                                 <Login/>
-                        </CounterContext>
+                        </ContextApi>
                     </Route>
                     <Route exact path="/signup" >
-                        <CounterContext>
+                        <ContextApi>
                                 <Signup/>
-                        </CounterContext>
+                        </ContextApi>
                     </Route>
                     
                 </Switch>

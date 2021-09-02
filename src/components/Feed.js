@@ -8,7 +8,7 @@ import Avatar from '@material-ui/core/Avatar'
 import Nav from './navigation';
 import LoginPage from './LoginPage';
 import { Link } from 'react-router-dom'
-import { createdContext } from './counterContext';
+import { createdContext } from './ContextApi';
 import Skeleton from 'react-loading-skeleton';
 
 
@@ -20,7 +20,7 @@ const Feed = () => {
   return (
     <div >
       
-      {!user ? <LoginPage /> :
+      {!user.displayName ? <LoginPage /> :
         
         <div className="App">
           <Nav />

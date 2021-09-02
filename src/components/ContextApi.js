@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 export const createdContext = createContext()
 
 
-const CounterContext = ( props ) => {
+const ContextApi = ( props ) => {
     
   const [user ,setUser] = useState([])
   const [posts, setPost] = useState([])
@@ -36,7 +36,8 @@ const CounterContext = ( props ) => {
           }
         })
     
-        return () =>  Unsubscribe()
+      return () => Unsubscribe()
+      
       }, [user])
     
   
@@ -48,4 +49,4 @@ const CounterContext = ( props ) => {
     )
 }
 
-export default CounterContext;
+export default ContextApi;

@@ -4,7 +4,7 @@ import Avatar from '@material-ui/core/Avatar'
 import { db } from './firebase'
 import firebase from 'firebase'
 import PostSkeleton from './postSkeleton';
-import { createdContext } from './counterContext'
+import { createdContext } from './ContextApi'
 
 
 const Posts = ({  totallikes, postId, username, caption, imageurl }) => {
@@ -14,6 +14,7 @@ const Posts = ({  totallikes, postId, username, caption, imageurl }) => {
     const [ postload,setPostload] = useState()
     const [comments, setComments] = useState([])
     const [comment, setComment] = useState('')
+    const [clickviewall, setClickViewAll] = useState(false)
     const [checkingUser, setCheckingUser] = useState(totallikes.includes(user.displayName))
     const commentInput = useRef()
     
@@ -40,30 +41,30 @@ const Posts = ({  totallikes, postId, username, caption, imageurl }) => {
     
     useEffect(() => {
 
-        setTimeout(() => {
+        const load=setTimeout(() => {
             db.collection("posts").onSnapshot(snapshot => {
                 setPostload(snapshot.docs.map(doc=>doc.data()))
                 })
             },2000)
-         
+        return () => {
+             clearTimeout(load)
+         }
         }, [])
         
     useEffect(() => {
-        //for comment section UI
-     
-         
+        //for comment section UI    
         var unsubscribe
         
             if (postId) {
                 unsubscribe = db
                     .collection("posts")
                     .doc(postId)
-                    .collection("comments")
+                    .collection("comments").orderBy("timestamp","asc")
                     .onSnapshot((snapshot) => {
                         setComments(snapshot.docs.map((doc) => ({
-                            commentId: doc.id,   
-                        }                         
-                        )))
+                            data: doc.data(),
+                            CommentId: doc.id
+                        })))
                     
                     })
             }
@@ -72,9 +73,6 @@ const Posts = ({  totallikes, postId, username, caption, imageurl }) => {
                 unsubscribe()
             }
         
-          
-           
-    
     }, [postId])
 
     const postComment = (event) => {
@@ -82,6 +80,7 @@ const Posts = ({  totallikes, postId, username, caption, imageurl }) => {
         db.collection("posts").doc(postId).collection("comments").add({
             text: comment,
             username: user.displayName,
+            timestamp : firebase.firestore.FieldValue.serverTimestamp(),
             
         })
         setComment('')
@@ -125,11 +124,25 @@ const Posts = ({  totallikes, postId, username, caption, imageurl }) => {
                     {/*comment section */}
           
                     <div className="post__commented">
-                        {comments.map((comment) => (
+                       
+                        {comments.slice(0,3).map(({data,commentId}) => (
                             <p>
-                                <strong>  {comment.username}</strong> {comment.text}
+                                <strong>  {data.username}</strong> {data.text} 
+                               
                             </p>
                         ))}
+
+                        {comments.length > 3 && (
+                            clickviewall ? comments.slice(3).map(({ data }) => (
+                                <p>
+                                    <strong>  {data.username}</strong> {data.text} 
+                                </p>
+                            )) :
+                            <span className="viewall" onClick={() => setClickViewAll(true)}>view all {comments.length} comments</span>
+                           
+                        )}
+                        
+                        
                     </div>
                 
                 
