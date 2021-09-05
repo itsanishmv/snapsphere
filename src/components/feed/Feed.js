@@ -1,19 +1,17 @@
 import React from 'react'
 import './Feed.css';
-import Posts from './posts'
+import Posts from '../posts/posts'
 import { useContext} from 'react';
-
 import Avatar from '@material-ui/core/Avatar'
-
-import Nav from './navigation';
-import LoginPage from './LoginPage';
+import Nav from '../nav bar/navigation';
+import LoginPage from '../login/LoginPage';
 import { Link } from 'react-router-dom'
-import { createdContext } from './ContextApi';
+import { createdContext } from '../ContextApi';
 import Skeleton from 'react-loading-skeleton';
 
 
 const Feed = () => {
-  
+  console.log("feed re-rendering")
  //context api 
   const { user, posts } = useContext(createdContext)
   
@@ -34,7 +32,10 @@ const Feed = () => {
                 posts.map(({ post, id }) => {
                       
                   return (
-                    <Posts  totallikes={post.likes} key={id} postId={id} username={post.username} imageurl={post} caption={post} />
+                    <div key={id}>
+                      <Posts totallikes={post.likes}  postId={id} username={post.username} imageurl={post} caption={post} />
+                    </div>
+                   
                   )
                 })
               }

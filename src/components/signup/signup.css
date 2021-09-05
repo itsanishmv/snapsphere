@@ -1,4 +1,4 @@
-.login__wrapper {
+.signup__wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,7 +9,7 @@
   height: 650px;
 }
 
-.login__form {
+.signup__form {
   height: 300px;
   display: flex;
   flex-direction: column;
@@ -43,7 +43,7 @@
 .password:focus {
   outline: 1px solid #0095f6;
 }
-.login__button {
+.signup__button {
   height: 26px;
   background-color: #0095f6;
   border: none;
@@ -51,7 +51,7 @@
   color: white;
   font-weight: 100px;
 }
-.login__button:hover {
+.signup__button:hover {
   cursor: pointer;
 }
 .insta__logo {
@@ -72,6 +72,7 @@
 }
 .signup__text {
   font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .right__form {

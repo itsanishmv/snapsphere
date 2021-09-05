@@ -10,10 +10,12 @@ const ContextApi = ( props ) => {
   const [user ,setUser] = useState([])
   const [posts, setPost] = useState([])
   const [cancelUpload, setCancelUpload] = useState('')
+ 
+  
   
     useEffect(() => {
-  
-      db.collection('posts').orderBy("Timestamp","desc").onSnapshot(snapshot => {
+      
+     var unsubs=db.collection('posts').orderBy("Timestamp","desc").onSnapshot(snapshot => {
         setPost(snapshot.docs.map((doc) => ({
           id: doc.id,
           post: doc.data()
@@ -21,9 +23,10 @@ const ContextApi = ( props ) => {
         })))
         
     })
-   
+      return () =>  unsubs()
+        
     }, [])
-  
+    
     useEffect(() => {
         //authentication 
         const Unsubscribe = auth.onAuthStateChanged((authuser) => {
@@ -40,7 +43,7 @@ const ContextApi = ( props ) => {
       
       }, [user])
     
-  
+
     
     return (
       <createdContext.Provider value={{posts, user, cancelUpload, setCancelUpload }}>

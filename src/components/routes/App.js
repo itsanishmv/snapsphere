@@ -1,14 +1,14 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import React from 'react'
-import Loading from "./Instalogo";
-import ContextApi from "./ContextApi";
+import Loading from "../loading logo/Instalogo";
+import ContextApi from "../ContextApi";
 
 
-const Dashboard = lazy(()=> import('./Dashboard'))
-const Feed = lazy(() => import('./Feed'))
-const Login = lazy(() => import('./LoginPage'))
-const Signup = lazy(() => import('./signUp'))
+const Dashboard = lazy(()=> import('../dashboard/Dashboard'))
+const Feed = lazy(() => import('../feed/Feed'))
+const Login = lazy(() => import('../login/LoginPage'))
+const Signup = lazy(() => import('../signup/signUp'))
 
 const App = () => {
     

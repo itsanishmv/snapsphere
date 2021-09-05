@@ -1,14 +1,15 @@
 import React, {useContext } from 'react'
 import './dashboard.css'
-import Nav from './navigation'
+import Nav from '../nav bar/navigation'
 
-import { createdContext } from './ContextApi'
+import { createdContext } from '../ContextApi'
 
 
 const Dashboard = () => {
-    const {user,posts} = useContext(createdContext)
+    const { user, posts } = useContext(createdContext)
+    
     return (
-        <div>
+        <div className="background">
             
             <Nav />
             
@@ -22,7 +23,7 @@ const Dashboard = () => {
                         <img className="user__image" src="./user.png" alt="user dp" />
                         
                         <div className="profile__name">
-                            <h5 className="name__dashboard">{user.displayName}</h5>
+                            <p className="name__dashboard">{user.displayName}</p>
                         </div>
 
                         <div className="profile__details">

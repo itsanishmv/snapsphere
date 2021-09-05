@@ -2,9 +2,9 @@ import React from 'react'
 import './loginPage.css';
 import { useState} from 'react';
 
-import { auth } from './firebase'
+import { auth } from '../firebase'
 import { Link } from 'react-router-dom';
-import Feed from './Feed'
+import Feed from '../feed/Feed'
 
 
 
@@ -67,8 +67,8 @@ const LoginPage = () => {
              
             </form>
             <div className="login__signup">
-              <p className="signup__text">dont have an account?{
-                <Link style={{textDecoration:"none",fontWeight:"600",color:"#0095F7"}} ClassName="link__signup" to="/signup"> Sign Up </Link>
+              <p className="login__text">dont have an account?{
+                <Link style={{textDecoration:"none",fontWeight:"600",color:"#0095F7"}} className="link__signup" to="/signup"> Sign Up </Link>
               }</p>
             </div>
           </div>

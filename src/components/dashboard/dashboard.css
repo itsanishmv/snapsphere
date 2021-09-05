@@ -1,21 +1,24 @@
-.profile__header {
+.background {
+  background-color: #fafafa;
+  height: 100vh;
 }
 .profile__wrap {
   padding-top: 20px;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  background-color: #fafafa;
 }
 .profile__details {
   position: fixed;
   display: flex;
   transform: translate(600px, 250px);
-  font-size: 20px;
+  font-size: 15px;
   justify-content: space-between;
 }
 .profile__name {
   transform: translate(610px, 130px);
-  font-size: 35px;
+  font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
   position: fixed;
 }
@@ -43,16 +46,16 @@
   border-top: 2px solid lightgray;
   display: flex;
   position: static;
-  background-color: white;
+  background-color: #fafafa;
   transform: translate(250px, 350px);
   max-width: 1000px;
   flex-wrap: wrap;
 }
 .gallery__wrap * {
-  height: 400px;
+  height: 300px;
   width: 300px;
   border: 1px solid lightgray;
-  margin-left: 30px;
+  margin-left: 25px;
   object-fit: cover;
   margin-top: 20px;
 }
