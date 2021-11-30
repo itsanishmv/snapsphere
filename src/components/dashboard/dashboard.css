@@ -45,10 +45,11 @@
 .gallery__wrap {
   border-top: 2px solid lightgray;
   display: flex;
-  position: static;
+
   background-color: #fafafa;
   transform: translate(250px, 350px);
   max-width: 1000px;
+
   flex-wrap: wrap;
 }
 .gallery__wrap * {
@@ -68,4 +69,48 @@
 
 .image1:hover {
   opacity: 0.5;
+}
+
+@media only screen and (max-width: 427px) {
+  .profile__wrap {
+    transform: translateX(0px);
+  }
+  .no__following {
+    font-size: 12px;
+  }
+  .no__posts {
+    font-size: 12px;
+  }
+  .no__followers {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 12px;
+  }
+  .gallery__wrap * {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100px;
+    width: 100px;
+    margin-left: 10px;
+  }
+  .gallery__wrap {
+    transform: translate(100px, 300px);
+  }
+  .profile__wrap {
+    transform: translateX(-100px);
+  }
+  .profile__details {
+    left: -450px;
+  }
+
+  .profile__name {
+    font-size: 20px;
+    margin-left: -100px;
+    left: -250px;
+  }
+  .user__image {
+    height: 100px;
+    width: 100px;
+    left: -250px;
+  }
 }

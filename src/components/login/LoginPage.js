@@ -6,10 +6,6 @@ import { auth } from '../firebase'
 import { Link } from 'react-router-dom';
 import Feed from '../feed/Feed'
 
-
-
-
-
 const LoginPage = () => {
   
  

@@ -90,3 +90,30 @@ progress {
   padding-bottom: 10px;
   margin-left: 10px;
 }
+
+@media only screen and (max-width: 427px) {
+  .image_upload {
+    margin-left: 50px;
+    height: 400px;
+    width: 150px;
+    transform: translateX(-45px);
+  }
+  .imageupload__progress {
+    position: fixed;
+    left: 20px;
+    width: 300px;
+    height: 30px;
+    transform: translateY(-30px);
+  }
+  .cancelUploadButton {
+    transform: translate(60px, -100px);
+  }
+  .caption__imgupload {
+    height: 150px;
+    width: 300px;
+    transform: translate(-80px, -80px);
+  }
+  .upload__button {
+    margin-left: -5px;
+  }
+}

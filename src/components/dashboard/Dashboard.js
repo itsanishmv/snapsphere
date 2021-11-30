@@ -1,4 +1,4 @@
-import React, {useContext } from 'react'
+import React, {useContext,useEffect,useRef, useState } from 'react'
 import './dashboard.css'
 import Nav from '../nav bar/navigation'
 
@@ -7,6 +7,13 @@ import { createdContext } from '../ContextApi'
 
 const Dashboard = () => {
     const { user, posts } = useContext(createdContext)
+    const [num , setNum] = useState()
+    const el = useRef([])
+
+    useEffect(() => {
+        setNum(el.current.children.length)
+        console.log("running")
+    },[posts])
     
     return (
         <div className="background">
@@ -27,7 +34,7 @@ const Dashboard = () => {
                         </div>
 
                         <div className="profile__details">
-                            <h5 className="no__posts">1000 posts</h5>
+                            <h5 className="no__posts">{num} posts</h5>
                             <h5 className="no__followers">1m followers</h5>
                             <h5 className="no__following">500 following</h5>
                         </div>
@@ -35,7 +42,7 @@ const Dashboard = () => {
                     
                     <br />
                     
-                    <div className="gallery__wrap">
+                    <div ref={el} className="gallery__wrap">
                         {   
                             posts.map(({post}) => (
                                 

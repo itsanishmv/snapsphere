@@ -1,5 +1,5 @@
 .post-wrapper {
-  width: 600px;
+  max-width: 600px;
   border: 1px solid lightgray;
   margin-top: 30px;
   background-color: white;
@@ -12,9 +12,9 @@
 .post-image {
   min-height: 400px;
   max-height: 700px;
-
-  width: 600px;
-  object-fit: fill;
+  min-width: 300px;
+  max-width: 600px;
+  object-fit: cover;
   border-bottom: 1px solid lightgray;
   border-top: 1px solid lightgrey;
 }
@@ -119,7 +119,6 @@
 }
 
 .deletebtn__wrap {
-  display: flex;
   margin-left: 400px;
 }
 
@@ -146,4 +145,15 @@
 }
 .viewall:hover {
   cursor: pointer;
+}
+@media only screen and (max-width: 426px) {
+  .post-wrapper {
+    width: 100%;
+  }
+  .post-image {
+    width: 100%;
+  }
+  .deletebtn__wrap {
+    margin-left: 250px;
+  }
 }

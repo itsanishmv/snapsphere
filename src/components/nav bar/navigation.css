@@ -1,3 +1,17 @@
+.app-header {
+  width: 100%;
+  background-color: #ffffff;
+  object-fit: contain;
+  padding: 20px;
+  padding-bottom: 15px;
+  padding-top: 10px;
+  border-bottom: 2px solid lightgray;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
 .icons__wrap {
   display: flex;
   margin-left: -200px;
@@ -59,4 +73,54 @@
 }
 .logout__button:hover {
   background-color: #068ae2;
+}
+.mobile__chin__nav {
+  display: none;
+  visibility: hidden;
+  width: 800px;
+  justify-content: center;
+}
+.mobile__logout {
+  display: none;
+}
+
+@media only screen and (max-width: 427px) {
+  .icons__wrap {
+    display: none;
+  }
+
+  .mobile__chin__nav {
+    display: flex;
+    visibility: visible;
+
+    margin-left: -800px;
+    height: 50px;
+    width: 150%;
+    background-color: rgb(240, 240, 240);
+    align-items: center;
+    position: fixed;
+    left: 620px;
+    bottom: 0px;
+
+    z-index: 2;
+  }
+  .icon__home {
+    margin-left: 180px;
+    stroke: rgb(0, 0, 0);
+  }
+  .icon__upload {
+    margin-left: 100px;
+    transform: translateX(20px);
+  }
+  .profile__icon {
+    margin-left: 40px;
+    stroke: white;
+  }
+  .mobile__logout {
+    display: flex;
+    transform: translateX(-300px);
+  }
+  .logout__button {
+    width: 50px;
+  }
 }

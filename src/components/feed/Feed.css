@@ -4,20 +4,7 @@
 .App {
   background-color: #fafafa;
 }
-.app-header {
-  width: 100%;
-  background-color: #ffffff;
-  object-fit: contain;
-  padding: 20px;
-  padding-bottom: 15px;
-  padding-top: 10px;
-  border-bottom: 2px solid lightgray;
-  display: flex;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  z-index: 1;
-}
+
 .app__signup {
   display: flex;
   flex-direction: column;
@@ -110,4 +97,17 @@
   margin-left: 120px;
   margin-top: 7px;
   color: #3aacf7;
+}
+
+@media only screen and (max-width: 427px) {
+  .app__posts {
+    padding-left: 0px;
+    width: 100%;
+  }
+  .insta-logo {
+    margin-left: 0px;
+  }
+  .search {
+    margin-left: 10px;
+  }
 }
