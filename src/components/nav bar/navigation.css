@@ -118,9 +118,9 @@
   }
   .mobile__logout {
     display: flex;
-    transform: translateX(-300px);
+    transform: translateX(150px);
   }
   .logout__button {
-    width: 50px;
+    width: 80px;
   }
 }
