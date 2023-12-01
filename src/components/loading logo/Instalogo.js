@@ -1,12 +1,11 @@
-import React from 'react'
-import './instalogo.css'
+import React from "react";
+import "./instalogo.css";
 
-import InstagramIcon from '@material-ui/icons/Instagram';
 const Loading = () => {
-    return (
-        <div className="Insta-icon">
-            <InstagramIcon fontSize="large"/>
-        </div>
-    )
-}
+  return (
+    <div className="Insta-icon">
+      <img src="./snapsphere.svg" alt="sanp" />
+    </div>
+  );
+};
 export default Loading;
